@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class CaffeineLevels {
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        
+        double caffeineMg;
+
+        caffeineMg = scnr.nextDouble();
+        
+        double halfLife = 6.0;
+        
+        double caffeineAfter6Hours = caffeineMg * Math.pow(0.5, 6.0 / halfLife);
+
+        double caffeineAfter12Hours = caffeineMg * Math.pow(0.5, 12.0 / halfLife);
+
+        double caffeineAfter24Hours = caffeineMg * Math.pow(0.5, 24.0 / halfLife);
+        
+        System.out.printf("After 6 hours: %.2f mg\n", caffeineAfter6Hours);
+        System.out.printf("After 12 hours: %.2f mg\n", caffeineAfter12Hours);
+        System.out.printf("After 24 hours: %.2f mg\n", caffeineAfter24Hours);
+    }
+}
