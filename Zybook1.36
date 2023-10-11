@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class DrivingCosts {
+   public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+double mpg=sc.nextDouble();
+double ppg=sc.nextDouble();
+System.out.printf("%.2f %.2f %.2f\n",ppg*20.0/mpg,ppg*75.0/mpg,ppg*500.0/mpg);
+   }
+}
