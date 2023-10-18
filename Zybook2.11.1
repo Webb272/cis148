@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class MetersToFeet {
+   
+    public static double convert(double meters) {
+        return meters * 3.28;
+    }
+
+   
+   public static void main(String[] args) {
+              Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of meters: ");
+        double meters = input.nextDouble();
+
+        double feet = convert(meters);
+
+        System.out.printf("%.2f%n", feet);
+   }
+}
