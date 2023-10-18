@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class DrivingCostsMethod {
+   
+   public static double drivingCost(double drivenMiles, double milesPerGallon, double dollarsPerGallon) {
+      double totalCost = (dollarsPerGallon * drivenMiles) / milesPerGallon;
+      return totalCost;
+   }
+   
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      double milesPerGallon = scnr.nextDouble();
+      double dollarsPerGallon = scnr.nextDouble();
+      double drivenMiles = scnr.nextDouble();
+      
+      System.out.printf("%.2f ", drivingCost(drivenMiles, milesPerGallon, dollarsPerGallon) * 10);
+      System.out.printf("%.2f ", drivingCost(drivenMiles, milesPerGallon, dollarsPerGallon) * 50);
+      System.out.printf("%.2f\n", drivingCost(drivenMiles, milesPerGallon, dollarsPerGallon) * 400);
+   }
+}
