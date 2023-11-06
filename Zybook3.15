@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class LabProgram {
+	public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String input = sc.nextLine();
+
+        sc.close();
+
+        String prefix = input.substring(0, 5);
+
+        System.out.println("Prefix: " + prefix);
+	}
+}
