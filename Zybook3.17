@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class LabProgram {
+   
+	public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String input = sc.nextLine();
+
+        sc.close();
+
+        int middleStart = (input.length() - 5) / 2;
+
+        String midfix = input.substring(middleStart, middleStart + 5);
+
+        System.out.println("Midfix: " + midfix);
+
+	}
+}
