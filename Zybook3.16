@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class LabProgram {
+	public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+
+        String userInput = input.nextLine();
+
+        String postfix = userInput.substring(userInput.length() - 5);
+
+        System.out.println("Postfix: " + postfix);
+
+        input.close();
+	}
+}
