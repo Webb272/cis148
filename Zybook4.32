@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class GolfScores {
+    public String golfScore(int par, int strokes) {
+        if (par < 3 || par > 5 || strokes < 1 || strokes > 9) {
+            return "Error";
+        }
+
+        int difference = strokes - par;
+
+        if (difference == -2) {
+            return "Eagle";
+        } else if (difference == -1) {
+            return "Birdie";
+        } else if (difference == 0) {
+            return "Par";
+        } else if (difference == 1) {
+            return "Bogey";
+        } else {
+            return "Error";
+        }
+    }
+
+    public static void main(String[] args) {
+        GolfScores score = new GolfScores();
+        Scanner scnr = new Scanner(System.in);
+        int par;
+        int strokes;
+        String name;
+
+        par = scnr.nextInt();
+        strokes = scnr.nextInt();
+
+        name = score.golfScore(par, strokes);
+
+        System.out.println(name);
+
+        scnr.close();
+    }
+}                (Used Chat GPT for help!)
