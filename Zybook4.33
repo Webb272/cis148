@@ -1,0 +1,35 @@
+public class FunWithCharacters {
+    public String checkCharacter(String word, int index) {
+        if (index < 0 || index >= word.length()) {
+            return "Index out of bounds";
+        }
+        char character = word.charAt(index);
+
+        if (Character.isLetter(character)) {
+            return "Character '" + character + "' is a letter";
+        } else if (Character.isDigit(character)) {
+            return "Character '" + character + "' is a digit";
+        } else if (Character.isWhitespace(character)) {
+            return "Character '" + character + "' is a white space";
+        } else {
+            return "Character '" + character + "' is unknown";
+        }
+    }
+    public static void main(String[] args) {
+        FunWithCharacters labObject = new FunWithCharacters();
+        String word = "happy birthday";
+        int index = 2;
+        System.out.println(labObject.checkCharacter(word, index));
+
+        index = 5;
+        System.out.println(labObject.checkCharacter(word, index));
+
+        word = "happy birthday 2 you";
+        index = 15;
+        System.out.println(labObject.checkCharacter(word, index));
+
+        word = "happy birthday!";
+        index = 14;
+        System.out.println(labObject.checkCharacter(word, index));
+    }
+}
