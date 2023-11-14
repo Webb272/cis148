@@ -1,0 +1,67 @@
+import java.util.Scanner; 
+
+public class ExactChange {
+   public static void main(String[] args) {
+
+      Scanner scanner = new Scanner(System.in);
+
+        int changeAmount = scanner.nextInt();
+
+        if (changeAmount <= 0) {
+            System.out.println("No change");
+        } else {
+            int dollars = changeAmount / 100;
+            changeAmount %= 100;
+
+            int quarters = changeAmount / 25;
+            changeAmount %= 25;
+
+            int dimes = changeAmount / 10;
+            changeAmount %= 10;
+
+            int nickels = changeAmount / 5;
+            changeAmount %= 5;
+
+            int pennies = changeAmount;
+
+            if (dollars > 0) {
+                if (dollars == 1) {
+                    System.out.println("1 Dollar");
+                } else {
+                    System.out.println(dollars + " Dollars");
+                }
+            }
+            if (quarters > 0) {
+                if (quarters == 1) {
+                    System.out.println("1 Quarter");
+                } else {
+                    System.out.println(quarters + " Quarters");
+                }
+            }
+            if (dimes > 0) {
+                if (dimes == 1) {
+                    System.out.println("1 Dime");
+                } else {
+                    System.out.println(dimes + " Dimes");
+                }
+            }
+            if (nickels > 0) {
+                if (nickels == 1) {
+                    System.out.println("1 Nickel");
+                } else {
+                    System.out.println(nickels + " Nickels");
+                }
+            }
+            if (pennies > 0) {
+                if (pennies == 1) {
+                    System.out.println("1 Penny");
+                } else {
+                    System.out.println(pennies + " Pennies");
+                }
+            }
+        }
+
+        scanner.close();
+    }
+}
+        (Chat GPT helped me with this one!)
