@@ -1,0 +1,12 @@
+        Scanner scnr = new Scanner(System.in);
+        
+        int red = scnr.nextInt();
+        int green = scnr.nextInt();
+        int blue = scnr.nextInt();
+        int gray = (red + green + blue) / 3;
+
+        int newRed = red - gray;
+        int newGreen = green - gray;
+        int newBlue = blue - gray;
+        
+        System.out.println(newRed + " " + newGreen + " " + newBlue);
