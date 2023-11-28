@@ -1,0 +1,29 @@
+import java.util.Scanner; 
+
+public class VariedInputData {
+   public static void main(String[] args) {
+           int max = Integer.MIN_VALUE;
+        int sum = 0;
+        int count = 0;
+
+        while (true) {
+            int num = scanner.nextInt();
+            
+            if (num < 0) {
+                break;
+            }
+       
+            count++;
+            sum += num;
+            if (num > max) {
+                max = num;
+            }
+        }
+
+        if (count > 0) {
+            double average = (double) sum / count;
+            System.out.printf("%.2f %d\n", average, max);
+        }
+        scanner.close();
+   }
+}              
