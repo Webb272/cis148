@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        int n;
+
+        System.out.println("Enter a value here!");
+        n = scnr.nextInt();
+        
+        n = Math.abs(n);
+        
+        System.out.print("Order of your entered numbers: ");
+        for (int i = -n; i <= n; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        scnr.close();
+    }
+}                               (I changed the language used in the code for the "System.out.println" and I also changed it for "System.out.print".)
