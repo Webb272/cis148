@@ -5,17 +5,25 @@ public class Main {
         Scanner scnr = new Scanner(System.in);
         int n;
 
-        System.out.println("Enter a value here!");
+        System.out.println("Enter a value between 1 and 10!");
         n = scnr.nextInt();
-        
-        n = Math.abs(n);
-        
-        System.out.print("Order of your entered numbers: ");
-        for (int i = -n; i <= n; i++) {
-            System.out.print(i + " ");
+
+        if (n >= 1 && n <= 10) {
+            for (int i = 0; i <= 10; i++) {
+                System.out.println(i);
+            }
+
+            System.out.print("Order of your entered numbers: ");
+            for (int i = -n; i <= n; i++) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        } else {
+            System.out.println("Please enter a value between 1 and 10.");
         }
-        System.out.println();
 
         scnr.close();
     }
-}                               (I changed the language used in the code for the "System.out.println" and I also changed it for "System.out.print".)
+}                             (I changed the language used in the code for the "System.out.println" and I also changed it for "System.out.print". 
+                              The major change for this code was that I capped the value of numbers it can do. The way I have the code now is only numbers
+                              0-10). If you enter a number not familiar it should say "Please enter a value between 1-10).)
