@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class ElementsInRange {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numIntegers = scanner.nextInt(); 
+        int[] integerList = new int[20]; 
+        int lowerBound, upperBound; 
+
+        for (int i = 0; i < numIntegers; ++i) {
+            integerList[i] = scanner.nextInt();
+        }
+
+        lowerBound = scanner.nextInt();
+        upperBound = scanner.nextInt(); 
+
+        for (int i = 0; i < numIntegers; ++i) {
+            if (integerList[i] >= lowerBound && integerList[i] <= upperBound) {
+                System.out.print(integerList[i] + " ");
+            }
+        }
+        System.out.println();
+    }
+}
