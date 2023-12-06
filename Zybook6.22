@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class TwoSmallest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int numIntegers = scanner.nextInt();
+        int[] integerList = new int[numIntegers]; 
+
+
+        for (int i = 0; i < numIntegers; ++i) {
+            integerList[i] = scanner.nextInt();
+        }
+
+        int smallest = Integer.MAX_VALUE; 
+        int secondSmallest = Integer.MAX_VALUE; 
+
+        for (int i = 0; i < numIntegers; ++i) {
+            if (integerList[i] < smallest) {
+                secondSmallest = smallest; 
+                smallest = integerList[i]; 
+            } else if (integerList[i] < secondSmallest && integerList[i] != smallest) {
+                secondSmallest = integerList[i]; 
+            }
+        }
+
+        System.out.println(smallest + " " + secondSmallest);
+    }
+}
